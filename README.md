@@ -28,6 +28,8 @@ var parser = require("3dstojs");
 var jsonStr = parser.parseToJson("C:/3d/models/sample.3ds");
 ```
 
+Note: Both `parse()` and `parseToJson()` are synchronous calls
+
 Methods
 -------
 Parse - Takes in a filepath and optional options object.  Returns a js objected of the parsed data. Options to save JSON and log information to a file. For options See below
