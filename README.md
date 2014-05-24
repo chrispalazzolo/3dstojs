@@ -15,10 +15,6 @@ Installation
 ------------
 > npm install 3dstojs
 
-or
-
-> git 
-
 Usage:
 -------
 Returns a js object.
@@ -105,7 +101,7 @@ options = {
 
 Notes
 -----
-Since the .3ds file format isn't publicly available this parser might not parse all data in .3ds file.  If you feel like not all of the data in the file was parse.  Use the `options` parameter to help figure out what chunks are were not parsed.
+Since the .3ds file format isn't publicly available this parser might not parse all data in your .3ds file.  If you feel like not all of the data in the file was parse; use the `options` parameter to help figure out what chunks were not parsed.
 
 The best option setup for unparsed/unkown chunks:
 ```javascript
