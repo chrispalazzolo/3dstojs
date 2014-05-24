@@ -1,0 +1,24 @@
+{
+  "name": "3dstojs",
+  "version": "0.0.0",
+  "description": "nodejs module to parse .3ds files to js/json",
+  "main": "3ds2js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrispalazzolo/3dstojs.git"
+  },
+  "keywords": [
+    ".3ds",
+    "nodejs",
+    "parser"
+  ],
+  "author": "Chris Palazzolo <chrisp.git@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrispalazzolo/3dstojs/issues"
+  },
+  "homepage": "https://github.com/chrispalazzolo/3dstojs"
+}
