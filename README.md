@@ -80,23 +80,23 @@ Default Option object if the options parameter is omitted...
 options = {
   saveJson: false,
   saveOptions:{
-	  path: '<directory of 3ds file>',
-	  jsonPerItem: false,
-	  unparsedToFile: false
- 	},
- 	logging: false,
+    path: '<directory of 3ds file>',
+    jsonPerItem: false,
+    unparsedToFile: false
+  },
+  logging: false,
   logOptions:{
-	  read: true,
+    read: true,
     parsing: true,
     unparsed: true,
     unknown: true,
     jumping: false,
     files: true
   },
- 	verbose: false,
- 	verboseOptions:{
-	  onlyStats: false
- 	},
+  verbose: false,
+  verboseOptions:{
+    onlyStats: false
+  },
   trackUnparsed: false
 }
 ```
