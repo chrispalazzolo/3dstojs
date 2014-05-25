@@ -318,7 +318,7 @@ binary3DSParser.prototype = {
 		}
 	},
 	writeHeadingToLog: function(){
-		var hdMsg = "3ds2js.js - .3ds to JS Parser.  Log of Parsing file: " + this.filePath + this.file;
+		var hdMsg = "3dsTojs - .3ds to JS Parser.  Log of Parsing file: " + this.filePath + this.file;
 		var msgLen = hdMsg.length;
 		var lgBrdr = Array(msgLen + 1).join('=');
 		var smBrdr = Array(msgLen + 1).join('-');
