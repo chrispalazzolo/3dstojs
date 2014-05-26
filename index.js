@@ -2553,7 +2553,7 @@ function parseToJson(file, options){
 
 function help(){
 	var text = [];
-	text.push("**** 3ds2js Help *****************************************");
+	text.push("**** 3dsTojs Help *****************************************");
 	text.push("--- Functions: ---");
 	text.push(".parse(file, [options]) - returns an object of the parsed file.");
 	text.push(".parseToJson(file, [options]) - returns JSON of the parsed file.");
