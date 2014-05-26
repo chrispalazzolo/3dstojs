@@ -13,7 +13,10 @@
   "keywords": [
     ".3ds",
     "nodejs",
-    "parser"
+    "parser",
+    "binary",
+    "3d",
+    "3D Studios"
   ],
   "author": "Chris Palazzolo <chrisp.git@gmail.com>",
   "license": "MIT",
