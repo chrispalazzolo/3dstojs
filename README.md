@@ -1,7 +1,7 @@
 3dstojs
 =======
 
-A nodejs module to parses .3ds files to js or JSON.
+A nodejs module to parses 3D Studio (.3ds) files to javascript or JSON.
 
 Overview
 --------
