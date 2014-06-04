@@ -2541,8 +2541,9 @@ function parse(file, options){
 	return p.parse();
 }
 
+
 function parseToJson(file, options){
-	var obj = Parse(file, options);
+	var obj = parse(file, options);
 
 	if(obj !== null && !obj.err && obj.data){
 		obj.data = JSON.stringify(obj.data);
