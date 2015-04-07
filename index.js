@@ -1382,9 +1382,14 @@ binary3DSParser.prototype = {
 
 			if(dataChunk !== null){
 				var verts = []; // [x,y,z,x,y,z,x,y,z,x,y,...]
-			
+				var curPtPos = 0;
+
 				for(var i = 0; i < points; i++){
-					verts.push(dataChunk.readFloatLE(i * 4, true));
+					curPtPos = i * 12; // a point (x,y,z) are 3 floating point values, a float = 4 bytes;
+
+					verts.push(dataChunk.readFloatLE(curPtPos, true));     // x
+					verts.push(dataChunk.readFloatLE(curPtPos + 4, true)); // y
+					verts.push(dataChunk.readFloatLE(curPtPos + 8, true)); // z
 				}
 				
 				return {
@@ -1462,7 +1467,8 @@ binary3DSParser.prototype = {
 					this.verboseToConsole("..... Parsing Mesh Material...");
 					this.writeChunkToLog(1);
 
-					obj.material = this.parseMeshMat();
+					if(!obj.material) obj.material = [];
+					obj.material.push(this.parseMeshMat());
 
 					break;
 				case 0x4150:
