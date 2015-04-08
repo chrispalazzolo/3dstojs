@@ -1382,7 +1382,7 @@ binary3DSParser.prototype = {
 
 			if(dataChunk !== null){
 				var verts = []; // [x,y,z,x,y,z,x,y,z,x,y,...]
-				var curPtPos = 0;
+				var curPtPos = 0; // holds the next byte position for the next point.
 
 				for(var i = 0; i < points; i++){
 					curPtPos = i * 12; // a point (x,y,z) are 3 floating point values, a float = 4 bytes;
@@ -1467,7 +1467,7 @@ binary3DSParser.prototype = {
 					this.verboseToConsole("..... Parsing Mesh Material...");
 					this.writeChunkToLog(1);
 
-					if(!obj.material) obj.material = [];
+					if(!obj.material) { obj.material = []; }
 					obj.material.push(this.parseMeshMat());
 
 					break;
