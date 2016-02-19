@@ -105,7 +105,7 @@ binary3DSParser.prototype = {
 			return false;
 		}
 
-		if(file.indexOf('.3ds') < 1){ //a.3ds is a vaild file name
+		if(file.indexOf('.3ds') < 1&&file.indexOf('.3DS') < 1){ //a.3ds is a vaild file name
 			this.err = true;
 			this.errMsg = 'Not a vaild .3ds file: ' + file;
 			this.writeToLog(this.errMsg);
