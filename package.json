@@ -1,6 +1,6 @@
 {
   "name": "3dstojs",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "nodejs module to parse 3D Studio (.3ds) files to javascript and/or JSON",
   "main": "index.js",
   "scripts": {

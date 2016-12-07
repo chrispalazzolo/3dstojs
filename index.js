@@ -41,7 +41,7 @@ var binary3DSParser = function(file, options){
 		read: true,
 		parsing: true,
 		unparsed: true,
-		uknown: true,
+		unknown: true,
 		jumping: false,
 		file: true
 	};
@@ -227,7 +227,7 @@ binary3DSParser.prototype = {
 			}
 
 			if(ops.unknowns === false){
-				this.log_options.uknowns = false;
+				this.log_options.unknown = false;
 			}
 
 			if(ops.jumping === true){
@@ -1529,14 +1529,15 @@ binary3DSParser.prototype = {
 	},
 	parseMappingCoords: function(){ //Chunk 0x4140, Child of 0x4100
 		var vertCt = this.getShort();
-		var verts = []; // a vertex = float x, y... [x,y,x,y,x,y,...]
+		var vertUVCt = vertCt * 2; // vertex = u,v
+		var verts = []; // a vertex = float u, v... [u,v,u,v,u,v,...]
 		
 		var chunkLen = vertCt * 8;
 		
 		var dataChunk = this.readChunkFromFile(chunkLen);
 
 		if(dataChunk !== null){
-			for(var i = 0; i < vertCt; i++){
+			for(var i = 0; i < vertUVCt; i++){
 				verts.push(dataChunk.readFloatLE(i * 4, true));
 			}
 			
